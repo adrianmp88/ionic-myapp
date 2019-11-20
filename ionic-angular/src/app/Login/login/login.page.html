@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="md-person"></ion-icon> Iniciar sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-icon name="md-person" slot="start"></ion-icon>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user"></ion-input>
+
+    </ion-item>
+    <ion-item>
+        <ion-icon name="key" slot="start"></ion-icon>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Mantener sesion</ion-label>
+        <ion-checkbox slot="start" [(ngModel)]="remember"></ion-checkbox>
+      </ion-item>
+  </ion-list>
+  <div>
+    <ion-button expand="block" class="ion-padding" color="primary">Iniciar</ion-button>
+  </div>
+</ion-content>
