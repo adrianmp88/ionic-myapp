@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthguardService } from './services/authguard.service';
 const routes: Routes = [
   {
     path: '',
@@ -16,17 +16,18 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },*/
   {
-    path: 'recipes',    
+    path: 'recipes',
     children: [
     {
       path: '',
-      loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+      loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule),
+      canActivate: [AuthguardService]
     },
     {
       path: ':recipeid',
-      loadChildren: () => import('./recipes/recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
+      loadChildren: () => import('./recipes/recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule),
+      canActivate: [AuthguardService]
     }
-  
   ]
   },
   {
