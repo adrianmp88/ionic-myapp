@@ -9,7 +9,7 @@ import { Usuario } from '../Module/Usuario.module';
 })
 export class LoginService {
   private api = 'http://mtic.ddns.net/systrack_v3/asp/ws/tracking2.asp?guideCode=GP001000005';
-  private apilogin = 'http://mtic.ddns.net/ApiSystrack/api/login';
+  private apilogin = 'https://mtic.ddns.net/ApiSystrack/api/login';
 
   constructor(
     private http: HttpClient

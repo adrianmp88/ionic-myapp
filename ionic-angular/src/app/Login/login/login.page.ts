@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
   formLogin() {
     const Login  = {
       user: this.user,
-      password: this.pass,
+      password: 'Adm1n2019!',
       Empresa: 'sysv3'
     };
     this.logserv.postLogin(Login)
