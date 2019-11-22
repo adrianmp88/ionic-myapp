@@ -10,6 +10,7 @@ export class EntregaPage implements OnInit {
   encodeData: any;
   scannedData: {};
   barcodeScannerOptions: BarcodeScannerOptions;
+  guia: string;
   constructor(private auth: AutenthicationService, private barcodeScanner: BarcodeScanner) {
     this.barcodeScannerOptions = {
       showTorchButton: true,
@@ -23,11 +24,13 @@ export class EntregaPage implements OnInit {
     this.auth.logout();
   }
   scanCode() {
+    console.log('entro');
     this.barcodeScanner
       .scan()
       .then(barcodeData => {
-        alert('Barcode data ' + JSON.stringify(barcodeData));
         this.scannedData = barcodeData;
+        console.log(barcodeData.text);
+        this.guia = barcodeData.text;
       })
       .catch(err => {
         console.log('Error', err);
