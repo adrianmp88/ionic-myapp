@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutenthicationService } from '../services/autenthication.service';
-import { BarcodeScannerOptions, BarcodeScanner } from "@ionic-native/barcode-scanner/ngx";
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner/ngx';
 @Component({
   selector: 'app-entrega',
   templateUrl: './entrega.page.html',

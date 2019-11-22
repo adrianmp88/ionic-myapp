@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
