@@ -29,7 +29,7 @@ export class AutenthicationService {
   }
   login(usr: Usuario) {
     this.storage.set('USER_INFO', usr).then((response) => {
-      this.router.navigate(['recipes']);
+      this.router.navigate(['home']);
       this.authState.next(true);
     });
   }

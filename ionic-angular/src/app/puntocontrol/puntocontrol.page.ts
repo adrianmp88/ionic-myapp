@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AutenthicationService } from '../services/autenthication.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-puntocontrol',
+  templateUrl: './puntocontrol.page.html',
+  styleUrls: ['./puntocontrol.page.scss'],
 })
-export class HomePage implements OnInit {
+export class PuntocontrolPage implements OnInit {
 
   constructor(private auth: AutenthicationService) {}
   ngOnInit() {
@@ -15,4 +15,5 @@ export class HomePage implements OnInit {
   logOut() {
     this.auth.logout();
   }
+
 }

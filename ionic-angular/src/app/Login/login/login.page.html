@@ -11,16 +11,16 @@
     <ion-item>
       <ion-icon name="md-person" slot="start"></ion-icon>
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" [(ngModel)]="user"></ion-input>
+      <ion-input id="user"  type="text" [(ngModel)]="user"></ion-input>
 
     </ion-item>
     <ion-item>
         <ion-icon name="key" slot="start"></ion-icon>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="pass"></ion-input>
+      <ion-input id="password" #password (keyup.enter)="formLogin()"  type="password" [(ngModel)]="pass"></ion-input>
     </ion-item>
   </ion-list>
   <div>
-    <ion-button (click)="formLogin()" expand="block" class="ion-padding" color="primary" >Iniciar</ion-button>
+    <ion-button id="btnlogin"  (click)="formLogin()" expand="block" class="ion-padding" color="primary" >Iniciar</ion-button>
   </div>
 </ion-content>

@@ -33,6 +33,21 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./Login/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'entrega',
+    loadChildren: () => import('./entrega/entrega.module').then( m => m.EntregaPageModule),
+    canActivate: [AuthguardService]
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    canActivate: [AuthguardService]
+  },
+  {
+    path: 'puntocontrol',
+    loadChildren: () => import('./puntocontrol/puntocontrol.module').then( m => m.PuntocontrolPageModule),
+    canActivate: [AuthguardService]
   }
 ];
 

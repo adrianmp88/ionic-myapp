@@ -19,8 +19,7 @@ export class RecipesService {
       ingredients: ['Spaguetti','Carne']
     }
   ];
-  constructor() { }
-  
+  constructor() { }  
   getAllRecipes(){
     return[...this.recipes];
   }

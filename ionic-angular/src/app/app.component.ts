@@ -43,7 +43,7 @@ export class AppComponent {
       this.splashScreen.hide();
       this.auth.authState.subscribe(state => {
         if (state) {
-          this.router.navigate(['recipes']);
+          this.router.navigate(['home']);
         } else {
           this.router.navigate(['login']);
         }
